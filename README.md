@@ -5,6 +5,7 @@ Machine Learning-based Network Intrusion Detection System.
 
 
 
+
 \## **Project Overview**
 
 
@@ -95,6 +96,43 @@ Project initialised and repository structure created.
 
 \* Real-time intrusion detection
 
+## **Dataset Information**
 
 
+
+This project uses the NSL-KDD dataset, a benchmark dataset for Network Intrusion Detection Systems (NIDS).
+
+
+
+**Dataset Files:**
+
+\- KDDTrain+.txt : Training dataset
+
+\- KDDTest+.txt : Testing dataset
+
+
+
+The dataset contains normal network traffic and multiple categories of cyberattacks, including:
+
+
+
+\- Denial of Service (DoS)
+
+\- Probe Attacks
+
+\- Remote to Local (R2L)
+
+\- User to Root (U2R)
+
+
+
+**Dataset Location:**
+
+
+
+data/
+
+├── KDDTrain+.txt
+
+└── KDDTest+.txt
 
