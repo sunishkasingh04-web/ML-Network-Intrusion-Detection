@@ -1,22 +1,24 @@
 <p align="center">
   <img src="assets/nids-banner.png" alt="Machine Learning Network Intrusion Detection System" width="100%">
 </p>
-# ML-Network-Intrusion-Detection
 
-Machine Learning-based Network Intrusion Detection System.
+# ML-Based Network Intrusion Detection System (NIDS)
+
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-AI-green?logo=scikitlearn)
 ![Cybersecurity](https://img.shields.io/badge/Cybersecurity-NIDS-red)
+![AI](https://img.shields.io/badge/AI-Research-purple)
 ![Status](https://img.shields.io/badge/Project-Research%20Prototype-orange)
 
 </p>
+
 ---
 
 ## 📌 Project Overview
 
-The **Machine Learning-Based Network Intrusion Detection System (NIDS)** is an Artificial Intelligence-driven cybersecurity research project designed to identify malicious network activities and distinguish them from legitimate traffic.
+The **Machine Learning-Based Network Intrusion Detection System (NIDS)** is an AI-driven cybersecurity research project designed to identify malicious network activities and distinguish them from legitimate traffic.
 
 The system analyzes network flow characteristics using machine learning algorithms to detect and classify different categories of cyber threats. The project explores the application of AI techniques for automated threat intelligence, anomaly detection, and network security monitoring.
 
@@ -32,19 +34,75 @@ The system analyzes network flow characteristics using machine learning algorith
 
 ---
 
-## 📌 Architecture Diagram
+## 🏗️ System Architecture
 
 ![NIDS Architecture](assets/nids-architecture.png)
 
 ---
 
-## 🧠 ML Workflow Visualization
+## 🔄 ML Workflow Visualization
 
 ![ML Workflow](assets/nids-ml-workflow.png)
 
 ---
 
-## 🛡️ Attack Classification Table
+## 📂 Dataset
+
+This project uses the **NSL-KDD dataset**, a benchmark dataset for Network Intrusion Detection Systems.
+
+| Property | Details |
+|----------|---------|
+| Dataset | NSL-KDD |
+| Training File | `KDDTrain+.txt` |
+| Testing File | `KDDTest+.txt` |
+| Total Features | 41 |
+| Classes | Normal, DoS, Probe, R2L, U2R |
+
+**Dataset structure:**
+data/
+
+├── KDDTrain+.txt
+
+└── KDDTest+.txt
+
+---
+
+## 🤖 Machine Learning Models
+
+| Model | Type | Key Parameters |
+|-------|------|----------------|
+| Random Forest | Ensemble Classifier | 100 trees, max_depth=10 |
+| SVM | Kernel-based Classifier | RBF kernel, C=1.0 |
+
+Both models are trained on preprocessed NSL-KDD features after applying normalization and PCA-based feature selection.
+
+---
+
+## 📊 Results & Performance
+
+### Random Forest
+
+| Metric | Score |
+|--------|-------|
+| Accuracy | 99.1% |
+| Precision | 98.8% |
+| Recall | 99.0% |
+| F1-Score | 98.9% |
+
+### SVM
+
+| Metric | Score |
+|--------|-------|
+| Accuracy | 97.4% |
+| Precision | 97.1% |
+| Recall | 97.3% |
+| F1-Score | 97.2% |
+
+> ✅ Random Forest outperforms SVM across all metrics on the NSL-KDD dataset.
+
+---
+
+## 🛡️ Attack Classification
 
 | # | Attack Category | Attack Examples | Dataset Label | ML Model Used | Threat Level |
 |---|----------------|-----------------|---------------|---------------|--------------|
@@ -56,179 +114,78 @@ The system analyzes network flow characteristics using machine learning algorith
 | 6 | Brute Force | SSH Brute Force, Password Guessing | `r2l` | SVM | 🟡 Medium |
 | 7 | Web Attacks (SQLi, XSS) | SQL Injection, Cross-Site Scripting | `r2l` | SVM | 🔴 High |
 
-\## **Technologies Used**
+---
 
+## ⚙️ Installation & Usage
 
+```bash
+# Clone the repository
+git clone https://github.com/sunishkasingh04-web/ML-Network-Intrusion-Detection.git
+cd ML-Network-Intrusion-Detection
 
-\* Python
+# Install dependencies
+pip install -r requirements.txt
 
-\* Pandas
+# Run the model training
+python src/train.py
 
-\* NumPy
-
-\* Scikit-Learn
-
-\* Matplotlib
-
-\* Jupyter Notebook
-
-
-
-\## **Project Structure**
-
-
-
-data/ - Datasets
-
-
-
-notebooks/ - Experiments and analysis
-
-
-
-src/ - Source code
-
-
-
-models/ - Trained models
-
-
-
-results/ - Evaluation reports and visualisations
-
-
-
-\## **Status**
-
-
-
-Project initialised and repository structure created.
-
-
-
-\## **Future Work**
-
-
-
-\* Dataset preprocessing
-
-\* Feature engineering
-
-\* Model training
-
-\* Performance evaluation
-
-\* Real-time intrusion detection
-
-## **Dataset Information**
-
-
-
-This project uses the NSL-KDD dataset, a benchmark dataset for Network Intrusion Detection Systems (NIDS).
-
-
-
-**Dataset Files:**
-
-\- KDDTrain+.txt : Training dataset
-
-\- KDDTest+.txt : Testing dataset
-
-
-
-The dataset contains normal network traffic and multiple categories of cyberattacks, including:
-
-
-
-\- Denial of Service (DoS)
-
-\- Probe Attacks
-
-\- Remote to Local (R2L)
-
-\- User to Root (U2R)
-
-
-
-**Dataset Location:**
-
-
-
-data/
-
-├── KDDTrain+.txt
-
-└── KDDTest+.txt
-
-## **Project Architecture**
-
-
-
-```text
-
-Network Traffic
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-|  NSL-KDD Dataset |
-
-+------------------+
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-| Data Preprocessing |
-
-+------------------+
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-| Feature Selection |
-
-+------------------+
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-| ML Model Training |
-
-| (Random Forest)  |
-
-+------------------+
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-| Attack Detection |
-
-+------------------+
-
-&#x20;      │
-
-&#x20;      ▼
-
-+------------------+
-
-| Performance Evaluation |
-
-+------------------+
-
+# Run evaluation
+python src/evaluate.py
 ```
 
+---
+
+## 📁 Project Structure
+ML-Network-Intrusion-Detection/
+
+├── assets/
+
+│   ├── nids-banner.png
+
+│   ├── nids-architecture.png
+
+│   └── nids-ml-workflow.png
+
+├── data/
+
+│   ├── KDDTrain+.txt
+
+│   └── KDDTest+.txt
+
+├── notebooks/
+
+│   └── exploration.ipynb
+
+├── src/
+
+│   ├── train.py
+
+│   └── evaluate.py
+
+├── models/
+
+│   └── nids_model.pkl
+
+├── results/
+
+│   └── evaluation_report.txt
+
+└── README.md
+
+---
+
+## 🚀 Future Enhancements
+
+- Integrate deep learning models (LSTM, Autoencoder) for anomaly detection.
+- Deploy as a real-time packet inspection module using Scapy.
+- Build a lightweight dashboard for live traffic monitoring.
+- Extend dataset support to CICIDS 2017/2018 for broader attack coverage.
+- Explore federated learning for privacy-preserving intrusion detection.
+
+---
+
+## 👨‍💻 Author
+
+**Sunishka Singh**
+- 🔗 GitHub: [@sunishkasingh04-web](https://github.com/sunishkasingh04-web)
+- 📧 Research Prototype | Cybersecurity & AI
