@@ -4,6 +4,14 @@
 # ML-Network-Intrusion-Detection
 
 Machine Learning-based Network Intrusion Detection System.
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-AI-green?logo=scikitlearn)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-NIDS-red)
+![Status](https://img.shields.io/badge/Project-Research%20Prototype-orange)
+
+</p>
 
 
 
