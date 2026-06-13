@@ -12,34 +12,25 @@ Machine Learning-based Network Intrusion Detection System.
 ![Status](https://img.shields.io/badge/Project-Research%20Prototype-orange)
 
 </p>
+---
 
+## 📌 Project Overview
 
+The **Machine Learning-Based Network Intrusion Detection System (NIDS)** is an Artificial Intelligence-driven cybersecurity research project designed to identify malicious network activities and distinguish them from legitimate traffic.
 
+The system analyzes network flow characteristics using machine learning algorithms to detect and classify different categories of cyber threats. The project explores the application of AI techniques for automated threat intelligence, anomaly detection, and network security monitoring.
 
-\## **Project Overview**
+---
 
+## 🎯 Objectives
 
+- Develop an ML-based framework for automated network intrusion detection.
+- Analyze network traffic features to identify abnormal communication patterns.
+- Classify network activities into normal and malicious categories.
+- Evaluate machine learning models using standard performance metrics.
+- Explore AI-based approaches for improving cybersecurity defense mechanisms.
 
-This project aims to develop a Machine Learning-based Network Intrusion Detection System (NIDS) capable of identifying malicious network traffic and distinguishing it from normal network activity.
-
-
-
-The system will use machine learning algorithms to analyze network flow features and classify different types of cyberattacks.
-
-
-
-\## **Objectives**
-
-
-
-\* Detect malicious network activity.
-
-\* Classify network traffic as normal or attack.
-
-\* Compare the performance of multiple machine learning models.
-
-\* Improve cybersecurity monitoring through automated threat detection.
-
+---
 
 
 \## **Technologies Used**
