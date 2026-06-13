@@ -36,6 +36,12 @@ The system analyzes network flow characteristics using machine learning algorith
 
 ![NIDS Architecture](assets/nids-architecture.png)
 
+---
+
+## 🧠 ML Workflow Visualization
+
+![ML Workflow](assets/nids-ml-workflow.png)
+
 
 \## **Technologies Used**
 
