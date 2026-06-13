@@ -1,7 +1,9 @@
+<p align="center">
+  <img src="assets/nids-banner.png" alt="Machine Learning Network Intrusion Detection System" width="100%">
+</p>
 # ML-Network-Intrusion-Detection
 
 Machine Learning-based Network Intrusion Detection System.
-
 
 
 
