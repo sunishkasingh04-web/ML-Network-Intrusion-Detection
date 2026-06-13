@@ -42,6 +42,19 @@ The system analyzes network flow characteristics using machine learning algorith
 
 ![ML Workflow](assets/nids-ml-workflow.png)
 
+---
+
+## 🛡️ Attack Classification Table
+
+| # | Attack Category | Attack Examples | Dataset Label | ML Model Used | Threat Level |
+|---|----------------|-----------------|---------------|---------------|--------------|
+| 1 | DoS (Denial of Service) | SYN Flood, Ping of Death, Teardrop | `dos` | Random Forest, SVM | 🔴 High |
+| 2 | DDoS (Distributed DoS) | UDP Flood, HTTP Flood, Amplification | `dos` | Random Forest, SVM | 🔴 High |
+| 3 | Probe / Scanning | Nmap, Port Scan, IP Sweep | `probe` | Random Forest, SVM | 🟡 Medium |
+| 4 | R2L (Remote to Local) | FTP Write, IMAP Attack, Phishing | `r2l` | Random Forest, SVM | 🔴 High |
+| 5 | U2R (User to Root) | Buffer Overflow, Rootkit, XTerm | `u2r` | Random Forest, SVM | 🔴 Critical |
+| 6 | Brute Force | SSH Brute Force, Password Guessing | `r2l` | SVM | 🟡 Medium |
+| 7 | Web Attacks (SQLi, XSS) | SQL Injection, Cross-Site Scripting | `r2l` | SVM | 🔴 High |
 
 \## **Technologies Used**
 
