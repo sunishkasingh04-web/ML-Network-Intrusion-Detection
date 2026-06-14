@@ -1,0 +1,16 @@
+NIDS - Model Evaluation Report
+=======================================================
+
+Random Forest:
+  Accuracy  : 74.06%
+  Precision : 80.93%
+  Recall    : 74.06%
+  F1-Score  : 69.25%
+
+SVM:
+  Accuracy  : 76.02%
+  Precision : 74.37%
+  Recall    : 76.02%
+  F1-Score  : 71.05%
+
+Best Model (by F1): SVM
