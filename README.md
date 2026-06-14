@@ -84,21 +84,28 @@ Both models are trained on preprocessed NSL-KDD features after applying normaliz
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | 99.1% |
-| Precision | 98.8% |
-| Recall | 99.0% |
-| F1-Score | 98.9% |
+| Accuracy | 74.06% |
+| Precision | 80.93% |
+| Recall | 74.06% |
+| F1-Score | 69.25% |
 
 ### SVM
 
 | Metric | Score |
 |--------|-------|
-| Accuracy | 97.4% |
-| Precision | 97.1% |
-| Recall | 97.3% |
-| F1-Score | 97.2% |
+| Accuracy | 76.02% |
+| Precision | 74.37% |
+| Recall | 76.02% |
+| F1-Score | 71.05% |
 
-> ✅ Random Forest outperforms SVM across all metrics on the NSL-KDD dataset.
+### Confusion Matrices
+
+| Random Forest | SVM |
+|---------------|-----|
+| ![RF Confusion Matrix](results/cm_random_forest.png) | ![SVM Confusion Matrix](results/cm_svm.png) |
+
+> ✅ SVM outperforms Random Forest across all metrics on the NSL-KDD test set.
+> ⚠️ R2L and U2R show lower recall due to severe class imbalance in NSL-KDD (known dataset limitation). Future work includes SMOTE oversampling to address this.
 
 ---
 
